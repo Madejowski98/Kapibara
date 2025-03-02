@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz o Kapibarach</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Quiz o Kapibarach</h1>
+<nav>
+    <ul>
+        <li><a href="index.html">Strona Główna</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="fakty.html">Fakty</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+</nav>
+
+<main>
+    <a href="fakty.html" class="przycisk">Zobacz fakty o kapibarach</a>
+</main>
+
+    </header>
+
+    <main>
+        <section class="quiz-container">
+            <div class="pytanie">
+                <h3>1. Ile godzin na dobę śpią kapibary?</h3>
+                <div class="opcje">
+                    <label><input type="radio" name="pytanie1" value="a"> 8-10 godzin</label>
+                    <label><input type="radio" name="pytanie1" value="b"> 4-5 godzin</label>
+                </div>
+            </div>
+            
+            <div class="pytanie">
+                <h3>2. Dlaczego kapibary jedzą własne odchody?</h3>
+                <div class="opcje">
+                    <label><input type="radio" name="pytanie2" value="a"> Dla lepszego trawienia</label>
+                    <label><input type="radio" name="pytanie2" value="b"> Z braku pożywienia</label>
+                </div>
+            </div>
+
+            <button class="przycisk" onclick="sprawdzWynik()">Sprawdź wynik</button>
+            <div id="wynik" class="wynik"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Operacja "Kapibara" 2025 | Kontakt: s179760@student.uken.krakow.pl</p>
+    </footer>
+
+    <script>
+        function sprawdzWynik() {
+            let poprawneOdpowiedzi = {
+                pytanie1: "b",
+                pytanie2: "a"
+            };
+            
+            let wynik = 0;
+            
+            for(let i = 1; i <= 2; i++) {
+                let odpowiedz = document.querySelector(`input[name="pytanie${i}"]:checked`);
+                if(odpowiedz && odpowiedz.value === poprawneOdpowiedzi[`pytanie${i}`]) {
+                    wynik++;
+                }
+            }
+            
+            document.getElementById("wynik").innerHTML = `
+                Twój wynik: ${wynik}/2<br>
+                ${wynik === 2 ? "Gratulacje! Znasz kapibary doskonale!" : "Spróbuj jeszcze raz!"}
+            `;
+        }
+    </script>
+</body>
+</html>

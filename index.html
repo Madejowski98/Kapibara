@@ -5,45 +5,46 @@
     <title>Operacja "Kapibara" 2025</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body id="top">
+<body>
     <header>
-        <h1>Największe gryzonie świata</h1>
-        <p>Poznaj najspokojniejsze zwierzęta Ameryki Południowej!</p>
+        <h1>Witamy w świecie kapibar!</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="fakty.html">Fakty</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Strona główna</a></li>
-            <li><a href="fakty.html">Ciekawostki</a></li>
-        </ul>
-    </nav>
-
     <main>
-        <section>
-            <h2>Ciekawostki</h2>
-            <ul>
-                <li>Dorastają do 130 cm długości</li>
-                <li>Uwielbiają kąpiele wodne</li>
-                <li>Żyją w stadach do 20 osobników</li>
-            </ul>
+        <section class="lista-faktow">
+            <h2>Ciekawostki o kapibarach</h2>
+            <div class="fakt">
+                <h3>📏 Rozmiary</h3>
+                <p>Dorastają do 130 cm długości i 60 cm wysokości w kłębie</p>
+            </div>
+            <div class="fakt">
+                <h3>💦 Środowisko</h3>
+                <p>Uwielbiają kąpiele wodne i spędzają większość życia w pobliżu zbiorników wodnych</p>
+            </div>
+            <a href="fakty.html" class="przycisk">Zobacz wszystkie fakty</a>
         </section>
 
-        <section>
+        <section class="galeria">
             <h2>Nasza galeria</h2>
-            <div class="galeria">
-                <img src="kapibara1.jpg" alt="Kapibara w wodzie">
-                <img src="kapibara2.jpg" alt="Kapibara w stadzie">
-                <img src="kapibara3.jpg" alt="Kapibara jedząca">
-                <a href="fakty.html" class="przycisk">Zobacz fakty →</a>
+            <div class="galeria-rozszerzona">
+                <img src="img/kapibara-main1.jpg" alt="Kapibara w swoim naturalnym środowisku">
+                <img src="img/kapibara-main2.jpg" alt="Stado kapibar odpoczywające">
             </div>
+            <a href="galeria.html" class="przycisk">Zobacz więcej zdjęć</a>
         </section>
     </main>
 
     <footer>
-        <p>© Operacja "Kapibara" 2025</p>
-        <p>Kontakt: s179760@student.uken.krakow.pl</p>
+        <p>© Operacja "Kapibara" 2025 | Kontakt: s179760@student.uken.krakow.pl</p>
     </footer>
-
-    <a href="#top" class="przycisk" title="Powrót na górę">↑</a>
 </body>
 </html>
